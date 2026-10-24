@@ -11,10 +11,11 @@ pipeline {
 
         stage('Validate Application') {
             steps {
-                sh '''
-                    test -s index.html
-                    grep -q "Jenkins Auto Scaling Application" index.html
-                    echo "Application validation successful"
+                bat '''
+                    if not exist index.html exit /b 1
+                    findstr /C:"Jenkins Auto Scaling Application" index.html >nul
+                    if errorlevel 1 exit /b 1
+                    echo Application validation successful
                 '''
             }
         }
