@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Auto Scaling Demo</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eaf2ff, #f6f8fc);
+            color: #1f2937;
+            padding: 24px;
+        }
+        .card {
+            background: #fff;
+            padding: 40px 32px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(31, 41, 55, 0.12);
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 { color: #155eef; margin-top: 0; }
+        .status {
+            display: inline-block;
+            background: #dcfae6;
+            color: #067647;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .details {
+            margin-top: 24px;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+        footer { margin-top: 24px; color: #667085; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <span class="status">Application Running</span>
+        <h1>Jenkins Auto Scaling Application</h1>
+        <p>Successfully deployed on AWS EC2.</p>
+        <div class="details">
+            <strong>CI/CD:</strong> Jenkins + GitHub<br>
+            <strong>Infrastructure:</strong> AWS EC2 Auto Scaling Group<br>
+            <strong>Traffic Distribution:</strong> Application Load Balancer<br>
+            <strong>Version:</strong> 1.0
+        </div>
+        <footer>Demo application for learning AWS Auto Scaling and Jenkins CI/CD.</footer>
+    </main>
+</body>
+</html>
